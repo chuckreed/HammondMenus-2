@@ -1,3 +1,6 @@
-/**
- * Created by chuck.reed on 7/11/15.
- */
+angular.module('menuAppLayout', []).directive('menuAppHeader', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'Layout/Header.html'
+    }
+});

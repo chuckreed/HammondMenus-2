@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="MenuApp">
 <head>
     <title>HammondMenus.com - Hammond, Louisiana To Go Dining</title>
-    <link type="text/css" href="Libraries/bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
 </head>
 <body>
+    <menu-app-header></menu-app-header>
 
 
-    <script src="Libraries/angular-1.4.2/angular.js"></script>
-    <script src="Libraries/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
-    <script src="Libraries/angular-ui/ui-bootstrap-tpls-0.13.0.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- Application entry point -->
     <script src="MenuApp.js"></script>
+
+    <!-- Application core files -->
+    <script src="Layout/HeaderDirective.js"></script>
+    <script src="Layout/HeaderController.js"></script>
+
 </body>
 </html>
