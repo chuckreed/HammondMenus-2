@@ -5,9 +5,13 @@ angular.module('MenuApp', [
   'ngRoute',
   'MenuApp.alpha-view',
   'MenuApp.category-view',
-  'MenuApp.restaurant'
+  'MenuApp.restaurant-directive',
+  'MenuApp.restaurant-service'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/alpha'});
+}]).
+controller('MainCtrl', ['$scope', 'RestaurantService', function($scope, RestaurantService) {
+  $scope.currentYear = new Date().getFullYear();
 }]);
-//.value('currentYear');
+
