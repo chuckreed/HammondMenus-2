@@ -1,6 +1,7 @@
-angular.module('menuAppLayout', []).directive('menuAppHeader', function() {
+angular.module('menuAppLayout').directive('menuAppHeader', function() {
     return {
         restrict: 'E',
-        templateUrl: 'Layout/Header.html'
+        templateUrl: 'Layout/Header.html',
+        controller: 'HeaderController'
     }
 });

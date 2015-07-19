@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" data-ng-app="MenuApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" data-ng-app="MenuApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" data-ng-app="MenuApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" data-ng-app="MenuApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="Hammond Louisiana Restaurant Menus Online.  View alphabetically, by category, or by restaurant search keywords.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="menuapp-layout-header">
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">HammondMenus.com</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                               aria-expanded="false">
+                                View By <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/alpha">Alphabetic</a></li>
+                                <li><a href="#/category">Category</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#/contact">Contact</a></li>
+                        <li><a href="#/about">About Us</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </div>
+
+    <div data-ng-view></div>
+
+    <div class="navbar navbar-inverse navbar-fixed-bottom" id="site-footer">
+        <div class="navbar-inner">
+            <div class="container">
+                <div id="footer-brand">
+                    &copy; HammondMenus.com 2015 &nbsp;&nbsp;-&nbsp;&nbsp;
+                    <a href="#/terms-of-service">Terms of Service</a>
+                </div>
+                <div id="social-media-links">
+					<span id="facebook-share">
+						<a href="http://www.facebook.com/sharer.php?u=http://www.hammondmenus.com">
+                            <img src="images/facebook.png" alt="Share on Facebook">
+                        </a>
+					</span>
+					<span id="twitter-share">
+						<a href="http://twitter.com/share?text=Looking%20for%20a%20Hammond%20Menu?&amp;url=http://www.hammondmenus.com">
+                            <img src="images/twitter.png" alt="Share on Twitter">
+                        </a>
+					</span>
+					<span id="reddit-share">
+						<a href="http://www.reddit.com/submit?url=http://www.hammondmenus.com/">
+                            <img src="images/reddit.png" alt="Share on Reddit">
+                        </a>
+					</span>
+					<span id="google-share">
+						<a href="https://plus.google.com/share?url=http://www.hammondmenus.com">
+                            <img src="images/google-plus.png" alt="Share on Google+">
+                        </a>
+					</span>
+					<span id="tumblr-share">
+						<a href="http://www.tumblr.com/share" title="Share on Tumblr">
+                            <img src="images/tumblr.png" alt="Share on Tumblr">
+                        </a>
+					</span>
+					<span id="email-share">
+						<a href="mailto:?Subject=Check%20Out%20HammondMenus.com!&amp;Body=Helpful%20website:%20%20http://hammondmenus.com%20-%20Your%20Source%20For%20Hammond,%20LA%20Dining">
+                            <img src="images/email.png" alt="Share via Email">
+                        </a>
+					</span>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="alpha-view/alpha-view.js"></script>
+    <script src="category-view/category-view.js"></script>
+
+<!--
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+-->
+</body>
+</html>
