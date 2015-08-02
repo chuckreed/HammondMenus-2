@@ -1,8 +1,14 @@
 'use strict';
 
 angular.module('MenuApp.restaurant-directive', ['MenuApp.restaurant'])
-    .directive('restaurant', ['version', function(version) {
-        return function(scope, el, attrs) {
+    .directive('restaurant', function() {
+        return {
+            link: function() {
 
+            },
+            scope: {
+                model: '='
+            },
+            transclude: true
         };
-    }]);
+    });

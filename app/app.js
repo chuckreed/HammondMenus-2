@@ -13,5 +13,10 @@ config(['$routeProvider', function($routeProvider) {
 }]).
 controller('MainCtrl', ['$scope', 'RestaurantService', function($scope, RestaurantService) {
   $scope.currentYear = new Date().getFullYear();
+  RestaurantService.getRestaurants().then(function(response) {
+      $scope.restaurants = response.data.restaurants;
+      $scope.letters = response.data.letters;
+      $scope.categories = response.data.categories;
+  });
 }]);
 

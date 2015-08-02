@@ -3,7 +3,8 @@
 }
 
 body {
-    padding-top: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 a {
@@ -15,6 +16,18 @@ a:hover {
 
 .navbar-inverse .brand:hover {
     color: #999;
+}
+
+.restaurant-listing {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+.restaurant-listing span {
+    display: block;
+    font-size: 16px;
+}
+.restaurant-listing .listing-name {
+    font-size: 20px;
 }
 
 #footer-brand {

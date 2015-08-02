@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+<div class="restaurant-listing">
+    <span class="listing-name">
+        <a data-ng-href="menu.php?id={{id}}">{{model.name}}</a>
+        <img src="/images/delivery-car.png" alt="Delivery Available!" title="Delivery Available!" data-ng-show="delivers">
+    </span>
+    <span class="listing-address">{{model.address}}</span>
+    <span class="listing-phone">
+        <a data-ng-href="tel:+1-{{model.phone_number}}">{{model.phone_number}}</a>
+    </span>
+    <span class="listing-website" data-ng-hide="model.website_url == 'no website'">
+        <a data-ng-href="{{model.website_url}}">View Website</a>
+    </span>
+</div>
 
-</body>
-</html>

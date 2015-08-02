@@ -30,7 +30,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                aria-expanded="false">
                                 View By <span class="caret"></span>
                             </a>
@@ -47,13 +47,15 @@
         </nav>
     </div>
 
-    <div data-ng-view></div>
+    <div id="listing-content" class="container span8">
+        <div data-ng-view></div>
+    </div>
 
     <div class="navbar navbar-inverse navbar-fixed-bottom" id="site-footer">
         <div class="navbar-inner">
             <div class="container">
                 <div id="footer-brand">
-                    &copy; HammondMenus.com <span data-ng-bind="currentYear"></span>&nbsp;&nbsp;-&nbsp;&nbsp;
+                    &copy; HammondMenus.com <span data-ng-bind="currentYear"></span>&nbsp;&nbsp;-&nbsp;
                     <a href="#/terms-of-service">Terms of Service</a>
                 </div>
                 <div id="social-media-links">
@@ -105,10 +107,5 @@
     <script src="components/restaurant/restaurant.js"></script>
     <script src="components/restaurant/restaurant-directive.js"></script>
     <script src="components/restaurant/restaurant-service.js"></script>
-<!--
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
--->
 </body>
 </html>
