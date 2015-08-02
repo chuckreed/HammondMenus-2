@@ -8,7 +8,6 @@ angular.module('MenuApp.alpha-view', ['ngRoute'])
             controller: 'AlphaViewCtrl'
         });
     }])
-
-    .controller('AlphaViewCtrl', [function() {
-
+    .controller('AlphaViewCtrl', ['RestaurantService', function(RestaurantService) {
+        RestaurantService.enableAlphaView();
     }]);

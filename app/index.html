@@ -25,7 +25,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">HammondMenus.com</a>
+                    <a class="navbar-brand" href="#/">HammondMenus.com</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -45,6 +45,34 @@
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
+    </div>
+    <div id="list-navigation-container">
+        <div data-ng-attr-class="{{RestaurantService.currentView}}-navigation">
+            <div class="navbar navbar-fixed-top navbar-default" data-ng-attr-id="{{RestaurantService.currentView}}-listing-container">
+                <div class="container">
+                    <div id="listing-navigation" class="container">
+                        <ul data-ng-attr-class="{{RestaurantService.currentView}}-listing-navbar">
+                            <li data-ng-repeat="item in RestaurantService.navigationItems">
+                                <a data-ng-click="scrollToAnchor('listing-anchor-' + item[0])">
+                                    {{item}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="navbar-inner" data-ng-show="RestaurantService.currentView == 'alpha'">
+            <div id="listing-navigation" class="container">
+                <ul class="listing-navbar">
+                    <li data-ng-repeat="item in RestaurantService.navigationItems" data-ng-click="jumpToAnchor()">
+                        {{item}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        -->
     </div>
 
     <div id="listing-content" class="container span8">

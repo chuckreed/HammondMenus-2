@@ -9,6 +9,6 @@ angular.module('MenuApp.category-view', ['ngRoute'])
         });
     }])
 
-    .controller('CategoryViewCtrl', [function() {
-
+    .controller('CategoryViewCtrl', ['RestaurantService', function(RestaurantService) {
+        RestaurantService.enableCategoryView();
     }]);

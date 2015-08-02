@@ -1,1 +1,13 @@
-<div>Category View</div>
+<div>
+    <div data-ng-repeat="category in RestaurantService.categories">
+        <span data-ng-attr-id="listing-anchor-{{category}}"></span>
+        <div>
+            <h3>{{category}}</h3>
+        </div>
+        <div data-ng-repeat="restaurant in RestaurantService.restaurants">
+            <div data-ng-show="restaurant.categories.indexOf(category) >= 0" class="restaurant-listing">
+                <restaurant data-model="restaurant"></restaurant>
+            </div>
+        </div>
+    </div>
+</div>

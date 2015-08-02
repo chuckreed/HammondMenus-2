@@ -1,7 +1,7 @@
 <div class="restaurant-listing">
     <span class="listing-name">
-        <a data-ng-href="menu.php?id={{id}}">{{model.name}}</a>
-        <img src="/images/delivery-car.png" alt="Delivery Available!" title="Delivery Available!" data-ng-show="delivers">
+        <a data-ng-href="menu.php?id={{model.id}}">{{model.name}}</a>
+        <img src="images/delivery-car.png" alt="Delivery Available!" title="Delivery Available!" data-ng-show="model.delivers">
     </span>
     <span class="listing-address">{{model.address}}</span>
     <span class="listing-phone">

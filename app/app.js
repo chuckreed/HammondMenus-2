@@ -11,12 +11,14 @@ angular.module('MenuApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/alpha'});
 }]).
-controller('MainCtrl', ['$scope', 'RestaurantService', function($scope, RestaurantService) {
+controller('MainCtrl', ['$scope', 'RestaurantService', '$anchorScroll', function($scope, RestaurantService, $anchorScroll) {
   $scope.currentYear = new Date().getFullYear();
-  RestaurantService.getRestaurants().then(function(response) {
-      $scope.restaurants = response.data.restaurants;
-      $scope.letters = response.data.letters;
-      $scope.categories = response.data.categories;
-  });
+  $scope.RestaurantService = RestaurantService;
+
+  RestaurantService.fetchRestaurants();
+
+  $scope.scrollToAnchor = function(anchor) {
+      $anchorScroll(anchor);
+  }
 }]);
 

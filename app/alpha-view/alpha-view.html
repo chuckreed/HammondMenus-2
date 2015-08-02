@@ -1,23 +1,12 @@
 <div>
-    <div data-ng-repeat="letter in letters">
+    <div data-ng-repeat="letter in RestaurantService.letters">
         <span data-ng-attr-id="listing-anchor-{{letter}}"></span>
         <div>
             <h3>{{letter}}</h3>
         </div>
-        <div data-ng-repeat="restaurant in restaurants">
+        <div data-ng-repeat="restaurant in RestaurantService.restaurants">
             <div data-ng-show="restaurant.name.toUpperCase()[0] == letter" class="restaurant-listing">
-                <!-- <restaurant data-model="restaurant"></restaurant> -->
-                <span class="listing-name">
-                    <a data-ng-href="menu.php?id={{restaurant.id}}">{{restaurant.name}}</a>
-                    <img src="/images/delivery-car.png" alt="Delivery Available!" title="Delivery Available!" data-ng-show="delivers">
-                </span>
-                <span class="listing-address">{{restaurant.address}}</span>
-                <span class="listing-phone">
-                    <a data-ng-href="tel:+1-{{restaurant.phone_number}}">{{restaurant.phone_number}}</a>
-                </span>
-                <span class="listing-website" data-ng-hide="restaurant.website_url == 'no website'">
-                    <a data-ng-href="{{restaurant.website_url}}">View Website</a>
-                </span>
+                <restaurant data-model="restaurant"></restaurant>
             </div>
         </div>
     </div>
